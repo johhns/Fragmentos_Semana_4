@@ -1,4 +1,4 @@
-package com.johhns.fragmentos_semana_4;
+package com.johhns.fragmentos_semana_4.Adaptadores;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.johhns.fragmentos_semana_4.Mascota;
+import com.johhns.fragmentos_semana_4.R;
 
 import java.util.ArrayList;
 
@@ -24,7 +27,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from( parent.getContext() ).inflate( R.layout.activity_mascota , null, false ) ;
+        View v = LayoutInflater.from( parent.getContext() ).inflate( R.layout.mascota , null, false ) ;
         return new ViewHolder(v);
     }
 

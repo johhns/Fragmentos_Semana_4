@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fragmentos_Semana_4">
         <activity
+            android:name=".AcercaDe"
+            android:exported="true" />
+        <activity
+            android:name=".Contacto"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
