@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         barra1 = findViewById( R.id.barra_ppl ) ;
         tabs = findViewById(R.id.miTabLayout1);
         viewPager = findViewById(R.id.viewPager1);
+
         viewPager.setAdapter( new PageAdapter( getSupportFragmentManager() , getLifecycle() ) );
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
@@ -96,4 +97,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

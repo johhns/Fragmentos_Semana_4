@@ -12,7 +12,7 @@ public class AcercaDe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acerca_de);
 
-        Toolbar barra_acciones = findViewById( R.id.miActionBar ) ;
+        Toolbar barra_acciones = findViewById( R.id.miActionBar1 ) ;
         setSupportActionBar(barra_acciones);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

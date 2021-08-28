@@ -1,49 +1,43 @@
 package com.johhns.fragmentos_semana_4.Frafmentos;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.johhns.fragmentos_semana_4.Adaptadores.Adaptador;
+import com.johhns.fragmentos_semana_4.Adaptadores.AdaptadorPerfil;
+import com.johhns.fragmentos_semana_4.Mascota;
 import com.johhns.fragmentos_semana_4.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Perfil#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
+
 public class Perfil extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    ArrayList<Mascota> arrayMascotas2 ;
+    RecyclerView recView ;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public Perfil() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Perfil.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static Perfil newInstance(String param1, String param2) {
         Perfil fragment = new Perfil();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -52,8 +46,7 @@ public class Perfil extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
@@ -61,6 +54,41 @@ public class Perfil extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_perfil, container, false);
+        View v =  inflater.inflate(R.layout.fragment_perfil, container, false);
+
+        ImageView img_Perfil = (ImageView) v.findViewById(R.id.imgPerfil);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.peluchin);
+        RoundedBitmapDrawable imagenRedondeada = RoundedBitmapDrawableFactory.create(getResources(),bitmap);
+        imagenRedondeada.setCircular(true);
+        img_Perfil.setImageDrawable(imagenRedondeada);
+
+        arrayMascotas2 = new ArrayList<>();
+        recView =  v.findViewById(R.id.rcViewPerfil);
+        GridLayoutManager layout = new GridLayoutManager( getContext() ,3 ) ;
+        recView.setLayoutManager(layout);
+
+        crear_mascotas();
+
+        AdaptadorPerfil adapter = new AdaptadorPerfil(arrayMascotas2);
+        recView.setAdapter(adapter);
+
+
+        return v ;
     }
+
+    private void crear_mascotas() {
+        arrayMascotas2.add( new Mascota( R.drawable.peluchin , "" , 1 ) ) ;
+        arrayMascotas2.add( new Mascota( R.drawable.peluchin , "" , 2 ) ) ;
+        arrayMascotas2.add( new Mascota( R.drawable.peluchin , "" , 3 ) ) ;
+        arrayMascotas2.add( new Mascota( R.drawable.peluchin , "" , 4 ) ) ;
+        arrayMascotas2.add( new Mascota( R.drawable.peluchin , "" , 5 ) ) ;
+        arrayMascotas2.add( new Mascota( R.drawable.peluchin , "" , 6 ) ) ;
+        arrayMascotas2.add( new Mascota( R.drawable.peluchin , "" , 7 ) ) ;
+        arrayMascotas2.add( new Mascota( R.drawable.peluchin , "" , 8 ) ) ;
+        arrayMascotas2.add( new Mascota( R.drawable.peluchin , "" , 9 ) ) ;
+        arrayMascotas2.add( new Mascota( R.drawable.peluchin , "" , 1 ) ) ;
+        arrayMascotas2.add( new Mascota( R.drawable.peluchin , "" , 2 ) ) ;
+        arrayMascotas2.add( new Mascota( R.drawable.peluchin , "" , 3 ) ) ;
+    }
+
 }

@@ -11,10 +11,13 @@
         android:theme="@style/Theme.Fragmentos_Semana_4">
         <activity
             android:name=".AcercaDe"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"
+            />
         <activity
             android:name=".Contacto"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
