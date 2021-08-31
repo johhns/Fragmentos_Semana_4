@@ -1,4 +1,4 @@
-package com.johhns.fragmentos_semana_4.Adaptadores;
+package com.johhns.BaseDatos_Semana_5.Adaptadores;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -6,10 +6,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.johhns.fragmentos_semana_4.Frafmentos.Fragmento_Mascotas;
-import com.johhns.fragmentos_semana_4.Frafmentos.Perfil;
-
-import java.util.ArrayList;
+import com.johhns.BaseDatos_Semana_5.Vista.Fragmentos.Fragmento_Mascotas;
+import com.johhns.BaseDatos_Semana_5.Vista.Fragmentos.Perfil;
 
 public class PageAdapter extends FragmentStateAdapter {
 

@@ -1,4 +1,4 @@
-package com.johhns.fragmentos_semana_4.Frafmentos;
+package com.johhns.BaseDatos_Semana_5.Vista.Fragmentos;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -8,7 +8,6 @@ import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -16,10 +15,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.johhns.fragmentos_semana_4.Adaptadores.Adaptador;
-import com.johhns.fragmentos_semana_4.Adaptadores.AdaptadorPerfil;
-import com.johhns.fragmentos_semana_4.Mascota;
-import com.johhns.fragmentos_semana_4.R;
+import com.johhns.BaseDatos_Semana_5.Adaptadores.AdaptadorPerfil;
+import com.johhns.BaseDatos_Semana_5.Modelo.Mascota;
+import com.johhns.BaseDatos_Semana_5.R;
 
 import java.util.ArrayList;
 
@@ -69,7 +67,7 @@ public class Perfil extends Fragment {
 
         crear_mascotas();
 
-        AdaptadorPerfil adapter = new AdaptadorPerfil(arrayMascotas2);
+        AdaptadorPerfil adapter = new AdaptadorPerfil(arrayMascotas2,getActivity());
         recView.setAdapter(adapter);
 
 

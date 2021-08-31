@@ -1,26 +1,28 @@
-package com.johhns.fragmentos_semana_4.Adaptadores;
+package com.johhns.BaseDatos_Semana_5.Adaptadores;
 
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.johhns.fragmentos_semana_4.Mascota;
-import com.johhns.fragmentos_semana_4.R;
+import com.johhns.BaseDatos_Semana_5.Modelo.Mascota;
+import com.johhns.BaseDatos_Semana_5.R;
 
 import java.util.ArrayList;
 
 public class AdaptadorPerfil extends RecyclerView.Adapter<AdaptadorPerfil.ViewHolder> {
 
     ArrayList<Mascota> aMascotas ;
+    Activity  activity ;
 
-    public AdaptadorPerfil( ArrayList<Mascota>  p_mascotas ) {
+    public AdaptadorPerfil( ArrayList<Mascota>  p_mascotas, Activity activity ) {
         this.aMascotas = p_mascotas ;
+        this.activity  = activity ;
     }
 
     @NonNull

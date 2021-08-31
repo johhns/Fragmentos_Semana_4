@@ -1,6 +1,4 @@
-package com.johhns.fragmentos_semana_4;
-
-import static com.johhns.fragmentos_semana_4.R.menu.*;
+package com.johhns.BaseDatos_Semana_5.Vista;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,12 +10,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
-import com.johhns.fragmentos_semana_4.Adaptadores.PageAdapter;
-import com.johhns.fragmentos_semana_4.Frafmentos.Fragmento_Mascotas;
-import com.johhns.fragmentos_semana_4.Frafmentos.Perfil;
+import com.johhns.BaseDatos_Semana_5.Vista.Fragmentos.Fragmento_Mascotas;
+import com.johhns.BaseDatos_Semana_5.Vista.Fragmentos.Perfil;
+import com.johhns.BaseDatos_Semana_5.Adaptadores.PageAdapter;
+import com.johhns.BaseDatos_Semana_5.R;
 
 import java.util.ArrayList;
 
@@ -91,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(opcion1);
                 break;
             case R.id.contactos:
-                Intent opcion2 = new Intent(this,Contacto.class) ;
+                Intent opcion2 = new Intent(this, Contacto.class) ;
                 startActivity(opcion2);
                 break;
         }

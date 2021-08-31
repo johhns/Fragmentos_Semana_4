@@ -1,4 +1,4 @@
-package com.johhns.fragmentos_semana_4;
+package com.johhns.BaseDatos_Semana_5.Vista;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,8 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.android.material.textfield.TextInputEditText;
-
-import java.util.zip.Inflater;
+import com.johhns.BaseDatos_Semana_5.R;
 
 public class Contacto extends AppCompatActivity {
 

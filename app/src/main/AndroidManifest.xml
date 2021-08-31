@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.johhns.fragmentos_semana_4">
+    package="com.johhns.BaseDatos_Semana_5">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="BaseDatos_Semana_5"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Fragmentos_Semana_4">
+        android:theme="@style/Theme.BaseDatos_Semana_5">
         <activity
-            android:name=".AcercaDe"
+            android:name=".Vista.AcercaDe"
             android:exported="true"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Vista.MainActivity"
             />
         <activity
-            android:name=".Contacto"
+            android:name=".Vista.Contacto"
             android:exported="true"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".Vista.MainActivity"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".Vista.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
